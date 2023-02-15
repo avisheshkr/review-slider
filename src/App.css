@@ -44,10 +44,11 @@
 }
 
 .reviews {
-  height: 25em;
+  height: 30em;
   position: relative;
   display: flex;
   overflow: hidden;
+  z-index: 1;
 }
 
 .container {
@@ -133,4 +134,27 @@
 .activeSlide {
   opacity: 1;
   transform: translateX(0);
+}
+
+.dot-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1em;
+  z-index: 100;
+}
+
+.dot {
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+.dot.active {
+  color: black;
+}
+
+.dot.inactive {
+  color: rgba(0, 0, 0, 0.2);
 }
