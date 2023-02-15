@@ -1,0 +1,136 @@
+.App {
+  max-width: 50em;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  padding-top: 5em;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.reviews {
+  height: 25em;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: 0.4s ease-in-out;
+  opacity: 0;
+}
+
+.image-container {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: 5px solid orange;
+  box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  margin-top: 1.5em;
+  text-transform: uppercase;
+  color: orange;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.container p {
+  margin: 2.5em 0 1.5em 0;
+  line-height: 2em;
+  width: 80%;
+}
+
+.quote {
+  font-size: 3em;
+  color: orange;
+}
+
+.prev-container,
+.next-container {
+  background-color: #282c34;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.prev-container {
+  left: 0;
+}
+
+.next-container {
+  right: 0;
+}
+
+.prev-container:hover,
+.next-container:hover {
+  background-color: orange;
+}
+
+.nextSlide {
+  transform: translateX(100%);
+}
+
+.lastSlide {
+  transform: translateX(-100%);
+}
+
+.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
